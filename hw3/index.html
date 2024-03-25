@@ -348,30 +348,30 @@ Compare the results between uniform hemisphere sampling and lighting sampling in
   <table style="width:100%">
     <tr align="center">
       <td>
-        <img src="images/p3/bunny_ray_1.png" align="middle" width="400px"/>
-        <figcaption>1 Light Ray (CBbunny.dae)</figcaption>
+        <img src="images/p3/spheres_ray_1.png" align="middle" width="400px"/>
+        <figcaption>1 Light Ray (CBspheres_lambertian.dae)</figcaption>
       </td>
       <td>
-        <img src="images/p3/bunny_ray_4.png" align="middle" width="400px"/>
-        <figcaption>4 Light Rays (CBbunny.dae)</figcaption>
+        <img src="images/p3/spheres_ray_4.png" align="middle" width="400px"/>
+        <figcaption>4 Light Rays (CBspheres_lambertian.dae)</figcaption>
       </td>
     </tr>
     <tr align="center">
       <td>
-        <img src="images/p3/bunny_ray_16.png" align="middle" width="400px"/>
-        <figcaption>16 Light Rays (CBbunny.dae)</figcaption>
+        <img src="images/p3/spheres_ray_16.png" align="middle" width="400px"/>
+        <figcaption>16 Light Rays (CBspheres_lambertian.dae)</figcaption>
       </td>
       <td>
-        <img src="images/p3/bunny_ray_64.png" align="middle" width="400px"/>
-        <figcaption>64 Light Rays (CBbunny.dae)</figcaption>
+        <img src="images/p3/spheres_ray_64.png" align="middle" width="400px"/>
+        <figcaption>64 Light Rays (CBspheres_lambertian.dae)</figcaption>
       </td>
     </tr>
   </table>
 </div>
 <p>
-  When focusing on a scene with at least one area light, such as the CBbunny.dae file, and comparing the noise levels in soft shadows while rendering with varying numbers of light rays (1, 4, 16, and 64) using light sampling (not uniform hemisphere sampling), we observe a clear trend in the quality of the rendered images, particularly in terms of noise reduction and shadow softness.
+  When focusing on a scene with at least one area light, such as the CBspheres_lambertian.dae file, and comparing the noise levels in soft shadows while rendering with varying numbers of light rays (1, 4, 16, and 64) using light sampling (not uniform hemisphere sampling), we observe a clear trend in the quality of the rendered images, particularly in terms of noise reduction and shadow softness.
   <br><br>
-  1 Light Ray: With just a single light ray, the rendering of the bunny scene exhibits pronounced noise within the soft shadows. This is because the sampling is highly limited, capturing only a fraction of the possible light paths from the area light to the surface. The result is a shadow that, while directionally correct, lacks smoothness and detail, with stark contrasts between light and dark areas due to the insufficient sampling of the light's distribution.
+  1 Light Ray: With just a single light ray, the rendering of the spheres exhibits pronounced noise within the soft shadows. This is because the sampling is highly limited, capturing only a fraction of the possible light paths from the area light to the surface. The result is a shadow that, while directionally correct, lacks smoothness and detail, with stark contrasts between light and dark areas due to the insufficient sampling of the light's distribution.
   <br>
   4 Light Rays: Increasing the number of light rays to four begins to mitigate the noise within the soft shadows, as more potential light paths are sampled and contribute to the final image. The shadows start to show a bit more gradation, with a slight improvement in the transition between light and shadow regions. However, noise remains visible, indicating that while four samples provide a better approximation of the light's effect, it's still not enough to capture the full complexity of the lighting in the scene.
   <br>
